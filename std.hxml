@@ -1,1 +1,1 @@
--cmd haxelib run dox -o bin/pages -i bin/xml -ex microsoft -ex javax
+-cmd python dox.py -o bin/pages -i bin/xml -ex microsoft -ex javax
