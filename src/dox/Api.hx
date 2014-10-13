@@ -120,6 +120,23 @@ class Api {
 	}
 
 	/**
+		Returns the list of platforms for a given tree entry.
+
+		If the tree entry is a type its `platforms` list is returned.
+
+		If the tree entry is a package an empty list is returned.
+	**/
+	public function getTreePlatforms(tree:TypeTree) {
+		return switch (tree) {
+			case TPackage(name, _, _): new List();
+			case TClassdecl(t): t.platforms;
+			case TEnumdecl(t): t.platforms;
+			case TTypedecl(t): t.platforms;
+			case TAbstractdecl(t): t.platforms;
+		}
+	}
+
+	/**
 		Returns the short description of `infos`.
 
 		@todo: Document this properly.
