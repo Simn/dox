@@ -101,7 +101,7 @@ class TestClass
 	}
 
     /**
-      @throws com.qifun.jsonStream.JsonDeserializerError 反序列化时格式错误
+      @throws `haxe.Log` 反序列化时格式错误
     **/
 	public function testThrows() { }
 }

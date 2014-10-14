@@ -71,7 +71,7 @@ class JavadocHandler {
 					}
 					currentTag = {
 						name: name,
-						value: value,
+						value: value == null ? null : markdown.markdownToHtml(path, value),
 						doc: "",
 					}
 					tags.push(currentTag);
